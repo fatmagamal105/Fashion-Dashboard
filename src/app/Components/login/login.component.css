@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+.login{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.login h3{
+    text-align: center;
+    font-size: 46px;
+    padding: 36px 0px;
+    font-weight: 900;
+    color: #ffc330;
+    text-transform: capitalize;
+}
+.login .login-form{
+    margin: 70px 334px;
+    border: 3px solid transparent;
+    padding: 50px;
+    box-shadow: 1px 1px 26px 3px #ffa11eb3;
+}
+.login .login-form input{
+    border: 1px solid #413f3d9c;
+}
+.login .login-form input:hover,
+.login .login-form input:focus{
+    border: 1px solid #ffa11e;
+}
+.login .login-form button{
+    padding: 7px 30px;
+    font-size: 15px;
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+    font-weight: 700;
+}
+.login .login-form button:hover,
+.login .login-form button:focus{
+    background-color: #ffa11e;
+    color: #fff;
+    border: 1px solid transparent;
+}
+.form-check-input:checked {
+    background-color: #ffa11e;
+    border-color: #ffa11e;
+}

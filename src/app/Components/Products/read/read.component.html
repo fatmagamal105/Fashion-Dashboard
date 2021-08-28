@@ -1,0 +1,61 @@
+<!-- <router-outlet></router-outlet> -->
+<section class="read">
+  <div class="container">
+      <div class="content">
+        <button class="btn btn-default add" routerLink="/add-prodcuts/:{{productName}}">Add New Item</button>
+        <!-- <table mat-table [dataSource]="dataSource"> -->
+          <table class="table table-hover table-borderless">
+          <!-- Position Column -->
+              <thead>
+                <tr>
+                  <th scope="col" style="font-size: 12px;">IMG</th>
+                  <th scope="col" style="font-size: 12px;">Name</th>
+                  <th scope="col" style="font-size: 12px;">Type</th>
+                  <th scope="col" style="font-size: 12px;">Colors</th>
+                  <th scope="col" style="font-size: 12px;">Size</th>
+                  <th scope="col" style="font-size: 12px;">Price</th>
+                  <th scope="col"style="font-size: 12px;">Old Price</th>
+                  <th scope="col" style="font-size: 12px;">Discount</th>
+                  <th scope="col" style="font-size: 12px;">details</th>
+                  <th scope="col" style="font-size: 12px;">Amount</th>
+                  <th scope="col" style="font-size: 12px;">Edit</th>
+                  <th scope="col" style="font-size: 12px;">Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- <tr *ngFor=" orderBy: key: reverse | paginate: {itemsPerPage:5,currentPage:p } | let item of womenPro "> -->
+                <tr *ngFor=" let item of womenPro | paginate: { itemsPerPage: 3, currentPage: p }; index as i">  
+                  <!-- <td scope="col">{{ 1+i }}</td> -->
+                  <td scope="col"><img [src]="item.imageUrl"></td>
+                  <td scope="col">{{ item.name}}</td>
+                  <td scope="col">{{ item.type}}</td>
+                  <td scope="col">{{item.color}}</td>
+                  <td scope="col">{{item.size}}</td>
+                  <td scope="col">{{ item.price}}</td>
+                  <td scope="col">{{item.oldprice}}</td>
+                  <td scope="col">{{ item.discount}}</td>
+                  <td scope="col">{{item.details}}</td>
+                  <td scope="col">{{item.amount}}</td>
+                  <td>
+                      <button class="btn btn-primary" routerLink="/edit-products/:{{productName}}/:{{item.id}}">Edit</button>
+                  </td>
+                  <td>
+                      <button class="btn btn-danger" (click)="onDelete(item.id)" (click)="openSnackBar('Item Deleted Successfully', 'Undo')" routerLinkActive="router-link-active">Delete</button>
+                    </td>
+                </tr>
+              </tbody>
+        </table>
+      </div>  
+        <pagination-controls (pageChange)="p = $event"
+        previousLabel=""
+        nextLabel=""
+        ></pagination-controls>  
+                  
+  </div>                       
+</section>
+
+  
+
+
+
+

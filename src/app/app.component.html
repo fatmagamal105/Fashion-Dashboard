@@ -1,0 +1,68 @@
+<!-- <router-outlet></router-outlet> -->
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    <div class="header">
+        <div class="icons">
+            <i class="fas fa-cogs"></i> 
+            <span>E<em>-</em> Shop</span>
+        </div>
+        <div class="profile">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-user"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" routerLink="/admin-profile" routerLinkActive="router-link-active" >profile</a></li>
+          <li><a class="dropdown-item" routerLink="/" routerLinkActive="router-link-active" (click)="logout()" >logout</a></li>
+        </ul>
+        </div>
+    </div>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+        <button mat-button class="menu-button" routerLink="/dashboard">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+            <span>Dashboard</span>
+        </button>
+        <button mat-button class="menu-button" (click)="women()">
+            <mat-icon>person</mat-icon>
+            <span>Women</span>
+        </button>
+        <button mat-button class="menu-button" (click)="men()">
+            <mat-icon>person</mat-icon>
+            <span>Men</span>
+        </button>
+        <button mat-button class="menu-button" (click)="girls()">
+            <mat-icon>person</mat-icon>
+            <span>Girls</span>
+        </button>
+        <button mat-button class="menu-button" (click)="boys()">
+            <mat-icon>person</mat-icon>
+            <span>Boys</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/orders">
+            <mat-icon>info</mat-icon>
+            <span>Orders</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/reviews">
+            <mat-icon>info</mat-icon>
+            <span>Reviews</span>
+        </button>
+    
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z8">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+    
+
+    

@@ -1,0 +1,52 @@
+<section class="admin-profile">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="update-info">
+                    <form class="row g-3" #f="ngForm" (ngSubmit)="onSubmit(f)">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" [(ngModel)]="fname" #firstname="ngModel"  name="firstname" placeholder="First name">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Last name" [(ngModel)]="lname" #lastname="ngModel"  name="lastname">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="number" class="form-control" placeholder="phone" [(ngModel)]="phone" #phoneNumber="ngModel"  name="phoneNumber">
+                        </div>
+                        <div class="col-md-6">
+                            <!-- <input type="email" class="form-control" placeholder="Email" [(ngModel)]="email" #adminEmail="ngModel"  name="adminEmail"> -->
+                        </div>
+                        <div class="col-lg-12">
+                            <button class="btn btn-primary">update info</button>
+                        </div>
+                        <div class="col-lg-12" *ngIf="msg">
+                            <div class="text-success">Your information updated <i class="far fa-check-circle"></i></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="admin">
+                    <img src="./../../../assets/img/person0.jpg">
+                    <div class="body">
+                        <h5>{{username}}</h5>
+                        <span>CEO / CO-FOUNDER</span>
+                        <p>
+                            It is a long established fact that a reader will be distracted by 
+                            the readable content of a page when looking at its layout,
+                            It is a long established fact that a reader.
+                        </p>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+    
+
+
+
+
+

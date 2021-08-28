@@ -1,0 +1,73 @@
+<section class="edit">
+    <div class="container">
+        <div class="header">
+            <h5>update product</h5>
+        </div>
+        <div class="items" >
+            <!-- <form class="row g-3" #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" ngModel #name="ngModel"  name="name" placeholder="Product name">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" ngModel #type="ngModel" name="type" placeholder="Type">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" ngModel #details="ngModel"  name="details" placeholder="Details">
+                </div>
+                <div class="col-md-6">
+                    <input type="number" class="form-control" ngModel #amount="ngModel" name="amount" placeholder="Amount" >
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" ngModel #color="ngModel" name="color" placeholder="Color" >
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" ngModel #size="ngModel" name="size" placeholder="Size">
+                </div>
+                <div class="col-md-6">
+                    <input type="number" class="form-control" ngModel #price="ngModel" name="price" placeholder="Price">
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <input type="number" class="form-control" ngModel #oldprice name="oldprice"  placeholder="Old Price">
+                </div>
+                <div class="col-md-6">
+                    <input type="number" class="form-control" ngModel #discount="ngModel" name="discount" placeholder="Discount">
+                </div>
+                <div class="col-lg-12">
+                    <button class="btn btn-primary" type="submit">update</button>
+                </div>
+            </form> -->
+            <form class="row g-3" #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" [(ngModel)]="productname" #name="ngModel"  name="name" placeholder="Product name">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" [(ngModel)]="prodType" #type="ngModel" name="type" placeholder="Type">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" [(ngModel)]="prodDetails" #details="ngModel"  name="details" placeholder="Details">
+                </div>
+                <div class="col-md-6">
+                    <input type="number" class="form-control" [(ngModel)]="prodAmount" #amount="ngModel" name="amount" placeholder="Amount" >
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" [(ngModel)]="prodColor" #color="ngModel" name="color" placeholder="Color" >
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" [(ngModel)]="prodSize" #size="ngModel" name="size" placeholder="Size">
+                </div>
+                <div class="col-md-6">
+                    <input type="number" class="form-control" [(ngModel)]="prodPrice" #price="ngModel" name="price" placeholder="Price">
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <input type="number" class="form-control" [(ngModel)]="prodOldPrice" #oldprice name="oldprice"  placeholder="Old Price">
+                </div>
+                <div class="col-md-6">
+                    <input type="number" class="form-control" [(ngModel)]="prodDiscount" #discount="ngModel" name="discount" placeholder="Discount">
+                </div>
+                <div class="col-lg-12">
+                    <button class="btn btn-primary" type="submit">update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

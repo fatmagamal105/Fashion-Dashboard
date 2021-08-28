@@ -1,0 +1,62 @@
+.admin-profile{
+    margin: 90px 0px 20px;
+    text-align: center;
+}
+.admin-profile img{
+    width: 40%;
+    border-radius: 171px;
+    height: 150px;
+    position: relative;
+    bottom: 54px;
+    box-shadow: 0px 4px 13px 0px #1211114a;
+}
+.admin-profile .update-info{
+    background-color:transparent;
+    padding: 92px 20px;
+}
+.admin-profile .update-info input,
+.admin-profile .update-info select option,
+.admin-profile .update-info .form-select{
+    color: #7f7b7b;
+    font-size: 13px;
+}
+.admin-profile .update-info,
+.admin-profile .body{
+    border-radius: 6px;
+}
+
+.admin-profile .admin{
+    background-color: transparent;
+}
+.admin-profile .update-info button{
+    text-transform: capitalize;
+}
+.admin-profile .body{
+    padding: 0px 31px 10px;
+    line-height: 28px;
+}
+.admin-profile .body h5{
+    color: #999191;
+    font-size: 19px;
+}
+.admin-profile .body span{
+    color: #aeaaaadd;
+    text-transform: uppercase;
+}
+.admin-profile .body  p{
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.btn-primary{
+    background-color: #ffbc00;
+    border: transparent;
+    font-size: 14px;
+    border-radius: 0px;
+    padding: 8px 24px;
+}
+.btn-primary:hover{
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+    transition: all 0.6s;
+}

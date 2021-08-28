@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+.add{
+    margin: 140px 168px;
+    width: 56%;
+    background-color: transparent;
+    padding: 40px 18px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.add h5{
+    font-size: 34px;
+    font-weight: 600;
+    color: #f4b811de;
+    text-shadow: 0px 1px 1px #1005059e;
+    text-align: center;
+    padding: 20px 0px;
+}
+button{
+    color: #fff;
+    background-color: #ffbc00b0;
+    border-color: transparent;
+    padding: 10px 211px;
+    border-radius: 0px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+input:hover{
+    border: 1px solid #ffbc00b0;
+}
+button:hover,
+button:focus{
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+}
+

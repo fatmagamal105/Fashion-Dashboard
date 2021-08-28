@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+.read{
+    text-transform: capitalize;
+    font-family: 'Open Sans Condensed', sans-serif;
+   
+}
+.read .header{
+    display: flex;
+    text-align: center;
+}
+.read .header .item-num{
+    float: left;
+    display: flex;
+    margin: 10px 35px;
+}
+.read .header .search{
+    float: right;
+    display: flex
+}
+.read .header .search input{
+    width: 42%;
+    height: 38px;
+}
+.read{
+    background-color: transparent;
+}
+.read .content {
+    width: 90%;
+}
+.read table{
+    width: 100%;
+    overflow-x: scroll;
+    height: 400px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    margin: 0px;
+    max-width: 950px;
+}
+table tbody {
+    width: 100%;
+}
+.read table thead{
+    border-bottom: 1px solid #DDD;
+}
+.read table thead th{
+    font-size: 16px
+}
+.read table tbody,
+table thead
+{   font-size: 13px;
+    font-family: 'Roboto';
+}
+.read table tbody td img{
+    width: 100px;
+    height: 100px;
+}
+.item-num .form-select {
+    display: block;
+    width: 68%;
+}
+.item-num h5{
+    font-size: 14px;
+    color: #939191;
+}
+.item-num select{
+    font-size: 13px;
+    position: relative;
+    bottom: 7px;
+    margin-left: 10px;
+}
+.search{
+    position: relative;
+    left: 258px;
+}
+.search input{
+    width: 42%;
+}
+.search input:hover,
+.search input:focus{
+    border: 1px solid #000;
+}
+button{
+    border: 1px solid transparent;
+    background-color: #ffbc00b0;
+    color: #fff;
+    height: 38px;
+    padding: 0px 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    float: right;
+    margin-bottom: 10px;
+}
+.add{
+    bottom: 10px;
+    position: relative;
+}
+button:hover,
+button:focus{
+    color: #000000ab;
+    border: 1px solid #dfdfdf;
+    background-color: transparent;
+}
+.btn-danger{
+    background-color: red;
+}
+.table tbody tr:hover{
+    background-color: #ffbc00b0;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+pagination-controls {
+    font-size: 13px;
+}
+table thead th{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+table tbody,
+table thead{
+  color: #6b6868;
+  font-size: 12px;
+}
+table ul li {
+  list-style-type: none;
+}
+table ul li img{
+  width: 30%;
+  height: 30%;
+}
+pagination-controls {
+  font-size: 13px;
+}
+/**/

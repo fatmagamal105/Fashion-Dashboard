@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+pagination-template{
+    text-align: center;
+}
+pagination-template .ngx-pagination .current {
+    padding: 0.1875rem 0.625rem;
+    background: #ffd14f;
+    color: #fefefe;
+    cursor: default;
+    font-weight: 900;
+}
+.ngx-pagination li:hover{
+    background-color: #000;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+

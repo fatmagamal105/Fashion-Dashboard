@@ -1,0 +1,36 @@
+table {
+    width: 100%;
+    overflow-x: scroll;
+    height: 500px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    margin: 0px;
+    max-width: 950px;
+}
+.mat-elevation-z8{
+    padding: 16px;
+  }
+  table thead th{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+table tbody,
+table thead{
+  color: #6b6868;
+  font-size: 13px;
+}
+table ul li {
+  list-style-type: none;
+}
+table ul li img{
+  width: 30%;
+  height: 30%;
+}
+pagination-controls {
+  font-size: 13px;
+}
+.btn-danger{
+  font-size: 13px;
+}

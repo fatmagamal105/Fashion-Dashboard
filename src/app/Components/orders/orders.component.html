@@ -1,0 +1,84 @@
+<div class="mat-elevation-z8">
+    <!-- <table mat-table [dataSource]="dataSource"> -->
+      <table class="table table-hover table-borderless">
+        <thead>
+          <tr >
+            <!-- <th scope="col">Num</th> -->
+            <th scope="col">User Name</th>
+            <th scope="col">date</th>
+            <th scope="col">shippingInfo</th>
+            <th scope="col">items</th>
+            <th scope="col">totalprice</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of orders | paginate: { itemsPerPage: 2, currentPage: p };index as i">
+            <!-- <td scope="col">{{ i +1 }}</td> -->
+            <!-- <td>{{ i+1 }}</td> -->
+            <td scope="col">{{item.username}}</td>
+            <td scope="col">{{ item.date}}</td>
+            <!-- <td scope="col">{{item.shippingInfo[i].city}}</td> -->     
+            <td scope="col">
+                <ul *ngIf="item.shippingInfo">
+                  <li>City : {{item.shippingInfo.city}}</li>
+                  <li>Address : {{item.shippingInfo.street}}</li>
+                  <li>Apartment : {{item.shippingInfo.apart}}</li>
+                  <li>Phone : {{item.shippingInfo.phone}}</li>
+                </ul>
+            </td>
+            <!-- <td scope="col">{{ item.items[i] }}</td> -->
+            <td scope="col">
+              <ul *ngFor="let prod of item.items">
+                <li>Item name : {{prod.name}}</li>
+                <li>Item id : {{prod.itemId}}</li>
+                <li>From category : {{prod.category}}</li>
+                <li><img [src]="prod.imageUrl"></li>
+                <li>Color : {{prod.color}}</li>
+                <li>Size : {{prod.size}}</li>
+                <li>Quantity : {{prod.quantity}}</li>
+                <li>Price : {{prod.price | currency}}</li>
+                <hr>
+              </ul>
+            </td>
+            <td scope="col">{{item.totalprice | currency}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="openSnackBar('Item Deleted Successfully', 'Undo')" (click)="onDelete(item.id)" routerLinkActive="router-link-active"  >Delete</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="p = $event"
+          previousLabel=""
+          nextLabel=""
+    ></pagination-controls>
+      <!-- Name Column -->
+      <!-- <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container> -->
+      
+  
+      <!-- Weight Column -->
+      <!-- <ng-container matColumnDef="weight">
+        <th mat-header-cell *matHeaderCellDef> Weight </th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container> -->
+  
+      <!-- Symbol Column -->
+      <!-- <ng-container matColumnDef="symbol">
+        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container> -->
+  
+      <!-- <tr mat-header-row *matHeaderRowDef=""></tr>
+      <tr mat-row *matRowDef=""></tr> -->
+    <!-- </table>
+    -->
+    <!-- <mat-paginator [length]="100"
+          [pageSize]="1"
+          [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>     -->
+</div> 
+
+
