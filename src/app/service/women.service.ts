@@ -28,7 +28,7 @@ export class WomenService {
   }
 
   deleteItem(id:string,Product:string){
-    return this.db.collection(`${Product}`).doc(id).delete(); 
+    return this.db.collection(`${Product}`).doc(id).delete();
   }
 
   getItemById(id:string, Product:any){

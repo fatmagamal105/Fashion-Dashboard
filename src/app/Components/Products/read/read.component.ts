@@ -43,7 +43,7 @@ export class ReadComponent implements OnInit {
               private snackBar:MatSnackBar,
               private active:ActivatedRoute,
               private router:Router,private observer: BreakpointObserver,
-              private prodService:CategoryService, 
+              private prodService:CategoryService,
               private dbAuth:AuthService) {
                 this.productName = active.snapshot.params.name.slice(1);
                   //console.log(this.productName);
@@ -55,6 +55,7 @@ export class ReadComponent implements OnInit {
       this.womenPro = data.map(element => {
         let x : any = element;
         x = element.payload.doc.data();
+        console.log(x)
         return{
           id : element.payload.doc.id,
           ...x
@@ -62,7 +63,7 @@ export class ReadComponent implements OnInit {
       })
     })
   }
-  
+
   openSnackBar(message: string, action: string){
     let snackBarRef = this.snackBar.open(message,action, {duration:2500});
     snackBarRef.afterDismissed().subscribe(() => {
